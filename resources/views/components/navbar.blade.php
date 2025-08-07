@@ -1,4 +1,4 @@
-<nav class="bg-white/50 drop-shadow-md backdrop-blur-sm fixed top-0 z-50 left-0 w-full" x-data="{ isOpen: false }">
+<nav class="bg-blue-500/50 drop-shadow-md backdrop-blur-sm fixed top-0 z-50 left-0 w-full" x-data="{ isOpen: false }">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
         <div class="flex h-20 items-center justify-between">
             <div class="flex items-center">
@@ -12,13 +12,13 @@
             <!-- Navigasi Desktop -->
             <div class="hidden md:block flex-grow">
                 <div class="ml-10 flex items-baseline justify-center gap-10 font-light">
-                    <a href="/layanan" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Layanan</a>
-                    <a href="/solusi" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Solusi</a>
-                    <a href="/harga" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Harga</a>
-                    <a href="{{ route('article.index') }}" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Berita</a>
-                    <a href="/dukungan" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Dukungan</a>
-                    <a href="/partnership" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Partnership</a>
-                    <a href="/gallery" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Gallery</a>
+                    <a href="/layanan" class="text-white hover:bg-transparent hover:text-black rounded-md">Layanan</a>
+                    <a href="/solusi" class="text-white hover:bg-transparent hover:text-black rounded-md">Solusi</a>
+                    <a href="/harga" class="text-white hover:bg-transparent hover:text-black rounded-md">Harga</a>
+                    <a href="{{ route('article.index') }}" class="text-white hover:bg-transparent hover:text-black rounded-md">Berita</a>
+                    <a href="/dukungan" class="text-white hover:bg-transparent hover:text-black rounded-md">Dukungan</a>
+                    <a href="/partnership" class="text-white hover:bg-transparent hover:text-black rounded-md">Partnership</a>
+                    <a href="/gallery" class="text-white hover:bg-transparent hover:text-black rounded-md">Gallery</a>
                 </div>
             </div>
             <!-- Tombol Hubungi Kami di Desktop -->
