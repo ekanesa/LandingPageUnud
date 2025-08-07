@@ -21,7 +21,7 @@
     </button>
 </div> --}}
 
-<div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-7xl">
 <div class="mt-20 lg:max-w-7xl items-end relative mx-auto grid w-full max-w-2xl gap-x-16 px-6">
     <div class="relative mx-auto">
         <!-- Tambahkan class untuk mengatur ukuran gambar -->

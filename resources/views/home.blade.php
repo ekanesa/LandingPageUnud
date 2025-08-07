@@ -1,8 +1,6 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot>
-        <div class="mb-44">
         @include('partials._slider', ['sliders' => $sliders])
-        </div>
 
         <div class="relative">
             <div data-aos="zoom-in" class="absolute left-0 top-0 z-10 md:w-72 w-5">
@@ -12,7 +10,7 @@
                 <img src="asset/img/svg/blob-2.svg" alt="blob" class="blur-3xl opacity-30">
             </div>
 
-            <div class="mx-1 md:mx-40 mt-96 z-20">
+            <div class="mx-1 md:mx-40 mt- z-20">
                 <h3 data-aos="fade-up" class="text-xl mt-6 text-center text-gray-600 font-semibold">PT Integrasi Jasa Nusantara</h3>
                 <h1 data-aos="fade-up" class="text-3xl md:text-6xl text-center font-bold mt-6">Audit, Architect, Scale, and <span
                         class="text-red-600">Secure a faster</span>, network infrastructure.</h1>
