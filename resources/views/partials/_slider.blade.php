@@ -3,7 +3,7 @@
   <p class="text-lg text-gray-500 text-center py-10">Gallery Tidak Tersedia Saat Ini</p>
 @else
 
-  <div id="slider-container" class=" w-full h-[40vh] md:h-[60vh] lg:h-[80vh] overflow-hidden">
+  <div id="slider-container" class=" w-full h-[50vh] md:h-[70vh] lg:h-[90vh] overflow-hidden">
     
     <!-- Slides -->
     <div class="relative w-full">

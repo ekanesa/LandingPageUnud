@@ -1,8 +1,8 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot>
-        @include('partials._slider', ['sliders' => $sliders])
 
-        <div class="relative">
+        <div class="bg-blue-500 relative">
+            @include('partials._slider', ['sliders' => $sliders])
             <div data-aos="zoom-in" class="absolute left-0 top-0 z-10 md:w-72 w-5">
                 <img src="asset/img/svg/blob.svg" alt="blob" class="blur-3xl opacity-30">
             </div>
@@ -10,24 +10,24 @@
                 <img src="asset/img/svg/blob-2.svg" alt="blob" class="blur-3xl opacity-30">
             </div>
 
-            <div class="mx-1 md:mx-40 mt- z-20">
-                <h3 data-aos="fade-up" class="text-xl mt-6 text-center text-gray-600 font-semibold">PT Integrasi Jasa Nusantara</h3>
+            <div class="mx-1 md:mx-40 z-20">
+                <h3 data-aos="fade-up" class="text-xl mt-6 text-center text-black font-semibold">UCEAI</h3>
                 <h1 data-aos="fade-up" class="text-3xl md:text-6xl text-center font-bold mt-6">Audit, Architect, Scale, and <span
-                        class="text-red-600">Secure a faster</span>, network infrastructure.</h1>
+                        class="text-blue-600">Secure a faster</span>, network infrastructure.</h1>
                 <h3 data-aos="fade-up" class="mt-10 text-center mx-4 text-lg md:text-xl">(iJASA) merupakan perusahaan yang bergerak dalam bidang
                     Teknologi Informasi
                     khususnya dalam bidang penyediaan akses Internet (Internet Service Provider). Berdiri sejak tahun 2019 dan
                     telah di akuisisi menjadi bagian dari Baliyoni Group. ​</h3>
                 <div data-aos="fade-up" class="flex flex-row justify-center mx-11 mt-10 gap-4">
-                    <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6" href="#">
+                    <a class="group relative inline-flex border border-blue-600 focus:outline-none mt-6" href="#">
                         <span
-                            class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
+                            class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-blue-600 text-center font-bold uppercase bg-white ring-1 ring-blue-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
                             Hubungi Kami
                         </span>
                     </a>
-                    <a class="group relative inline-flex border border-red-600 focus:outline-none mt-6" href="#">
+                    <a class="group relative inline-flex border border-blue-600 focus:outline-none mt-6" href="#">
                         <span
-                            class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-red-600 text-center font-bold uppercase bg-white ring-1 ring-red-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
+                            class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-blue-600 text-center font-bold uppercase bg-white ring-1 ring-blue-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
                             Layanan
                         </span>
                     </a>
@@ -45,7 +45,7 @@
                 <div class="w-full px-5 xl:px-0 flex justify-center">
                     <div class="sm:max-w-[600px] mx-20">
                         <h5 class="text-gray-500">Fiber Optic</h5>
-                        <h2 class="text-4xl font-bold md:text-5xl">Internet Super <span class="text-red-500">Cepat</span>.
+                        <h2 class="text-4xl font-bold md:text-5xl">Internet Super <span class="text-blue-500">Cepat</span>.
                         </h2>
                         <p class="mt-6 text-gray-700 leading-relaxed">Kami tidak hanya menyediakan koneksi internet super
                             cepat, tetapi juga solusi jaringan lengkap termasuk Metro Ethernet untuk konektivitas tinggi di
@@ -66,7 +66,7 @@
                 <div class="w-full px-5 xl:px-0 flex justify-center">
                     <div class="sm:max-w-[600px] mx-20">
                         <h5 class="text-gray-500">Network Devices</h5>
-                        <h2 class="text-4xl font-bold md:text-5xl">Perangkat <span class="text-red-500">Jaringan
+                        <h2 class="text-4xl font-bold md:text-5xl">Perangkat <span class="text-blue-500">Jaringan
                                 Andal</span>.</h2>
                         <p class="mt-6 text-gray-700 leading-relaxed">Jaga data dan aplikasi Anda tetap aman dengan server
                             rack, perangkat jaringan, dan perangkat lain kami yang dirancang untuk keandalan dan efisiensi.
@@ -88,7 +88,7 @@
                     <div class="sm:max-w-[600px] mx-20">
                         <h5 class="text-gray-500">Service Support</h5>
                         <h2 class="text-4xl font-bold md:text-5xl">Dukungan Teknis dan Layanan Pelanggan <span
-                                class="text-red-500">Profesional</span>.</h2>
+                                class="text-blue-500">Profesional</span>.</h2>
                         <p class="mt-6 text-gray-700 leading-relaxed">Tim dukungan teknis kami siap 24/7 untuk memastikan
                             semua layanan kami—baik itu ISP, Metro E, atau server rack—berfungsi dengan optimal. Dapatkan
                             bantuan profesional kapan saja Anda membutuhkan, dengan respons cepat dan solusi yang efektif.
@@ -108,7 +108,7 @@
                 <div class="w-full px-5 xl:px-0 flex justify-center">
                     <div class="sm:max-w-[600px] mx-20">
                         <h5 class="text-gray-500">Broad Package Plans</h5>
-                        <h2 class="text-4xl font-bold md:text-5xl">Layanan yang <span class="text-red-500">Disesuaikan untuk
+                        <h2 class="text-4xl font-bold md:text-5xl">Layanan yang <span class="text-blue-500">Disesuaikan untuk
                                 Berbagai Kebutuhan</span>.</h2>
                         <p class="mt-6 text-gray-700 leading-relaxed">Kami menawarkan berbagai paket layanan yang dapat
                             disesuaikan dengan kebutuhan spesifik Anda. Baik itu koneksi internet rumah tangga, layanan
