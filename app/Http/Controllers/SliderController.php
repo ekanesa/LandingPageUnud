@@ -14,13 +14,6 @@ class SliderController extends Controller
         return view('slider', compact('sliders'));
     }
 
-    public function home()
-    {
-        $sliders = Slider::where('is_active', true)->get();
-        $title   = 'PT Integrasi Jasa Nusantara';
-        return view('home', compact('title','sliders'));
-    }
-
     /**
      * Show the form for creating a new resource.
      */
