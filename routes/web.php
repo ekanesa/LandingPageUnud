@@ -6,10 +6,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PartnershipController;
 use App\Http\Controllers\DukunganController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RoadmapController;
 use App\Http\Controllers\SliderController;
 
-Route::get('/', [SliderController::class, 'home'])
-     ->name('home');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/layanan', function () {
     return view('layanan', ['title' => 'Layanan']);
@@ -57,6 +60,7 @@ Route::prefix('articles')->group(function () {
 
 Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery');
 Route::get('/slider', [SliderController::class, 'index'])->name('slider');
+Route::get('/roadmaps', [RoadmapController::class, 'index'])->name('roadmaps');
 Route::get('/partnership', [PartnershipController::class, 'index'])->name('partnership');
 Route::get('/dukungan', [DukunganController::class, 'index'])->name('dukungan');
 

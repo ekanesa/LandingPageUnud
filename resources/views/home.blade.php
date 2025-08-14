@@ -38,7 +38,7 @@
         </div>
     </div>
     @include('partials._about')
-    @include('partials._roadmap')
+    @include('partials.roadmaps')
 
     {{-- Main Content --}}
 
@@ -97,6 +97,8 @@
             </div>
         </div>
 
+        @include('article_news.catalog_article', ['article' => $articles])
+        
         {{-- Direct Content Section --}}
         <div class="pt-16 text-center">
             <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Direct Content</h2>
