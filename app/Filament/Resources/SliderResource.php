@@ -9,12 +9,15 @@ use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\HtmlString;
 
 class SliderResource extends Resource
 {
@@ -59,8 +62,20 @@ class SliderResource extends Resource
                     ->label('Type')
                     ->sortable(),
                 ImageColumn::make('thumbnail')
+                    ->disk('public')
                     ->label('Thumbnail')
-                    ->square(),
+                    ->square()
+                    ->action(
+                        Action::make('Lihat Gambar')
+                            ->label(false)
+                            ->modalWidth('md')
+                            // 2. BUNGKUS DENGAN new HtmlString()
+                            ->modalContent(fn (Slider $record): HtmlString => 
+                                new HtmlString('<img src="' . Storage::url($record->thumbnail) . '" class="w-full">')
+                            )
+                            ->modalSubmitAction(false)
+                            ->modalCancelAction(false)
+                    ),
                 TextColumn::make('created_at')
                     ->label('Created At')
                     ->dateTime()
@@ -71,6 +86,7 @@ class SliderResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(), // <-- TAMBAHKAN BARIS INI
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

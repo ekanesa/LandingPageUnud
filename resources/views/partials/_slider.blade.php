@@ -12,7 +12,7 @@
           <img
             src="{{ asset('storage/' . $slider->thumbnail) }}"
             alt="{{ $slider->name }}"
-            class="object-cover object-center"
+            class="object-cover object-bottom"
             onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/e2e8f0/4a5568?text=Image+Not+Found';"
           />
         </div>
