@@ -8,14 +8,6 @@
 
         {{-- Overlay for content --}}
         <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black bg-opacity-40 p-4 text-center text-white">
-            
-            {{-- Decorative Blobs (hidden on mobile for cleaner look) --}}
-            <div data-aos="zoom-in" class="absolute left-0 top-0 z-10 hidden md:block md:w-72">
-                <img src="asset/img/svg/blob.svg" alt="blob" class="blur-3xl opacity-30">
-            </div>
-            <div data-aos="zoom-in" class="absolute right-0 bottom-0 z-10 hidden md:block md:w-72">
-                <img src="asset/img/svg/blob-2.svg" alt="blob" class="blur-3xl opacity-30">
-            </div>
 
             {{-- Content Container --}}
             <div class="relative z-20 max-w-4xl">
@@ -98,8 +90,8 @@
         </div>
 
         @include('article_news.catalog_article', ['article' => $articles])
-        
-        {{-- Direct Content Section --}}
+
+        {{-- Direct Content Section
         <div class="pt-16 text-center">
             <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Direct Content</h2>
             <div class="mx-auto mt-8 w-fit">
@@ -124,7 +116,7 @@
         </div>
 
         {{-- Partner Section --}}
-        <div id="Partner" class="pt-16 text-center">
+        {{-- <div id="Partner" class="pt-16 text-center">
             <h2 class="text-sm font-semibold uppercase tracking-wide text-slate-500">Partner</h2>
             <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
                 <svg title="HP" xmlns="http://www.w3.org/2000/svg" class="h-8 w-auto" viewBox="0 0 24 24">
@@ -133,6 +125,11 @@
                 <img src="{{ asset('asset/aruba.-kzxnj5K.png') }}" alt="Gambar Aruba" class="h-12 w-auto">
                 <p class="text-sm text-slate-500">and more</p>
             </div>
-        </div>
+        </div>--}}
+
     </div>
+    @include('partials._people', ['people' => $peoples])
+    @include('partials._focus', ['focuses' => $focuses])
+    @include('partials._portfolios', ['portfolios' => $portfolios])
+    @include('partials._partner', ['partnerships' => $partnerships])
 </x-layout>

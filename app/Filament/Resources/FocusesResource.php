@@ -2,23 +2,26 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SliderResource\Pages;
-use App\Models\Slider;
+use App\Filament\Resources\FocusesResource\Pages;
+use App\Filament\Resources\FocusesResource\RelationManagers;
+use App\Models\Focuses;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Tables\Actions\Action;
 use Filament\Tables\Columns\BooleanColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Table;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\HtmlString;
 
-class SliderResource extends Resource
+class FocusesResource extends Resource
 {
-    protected static ?string $model = Slider::class;
+    protected static ?string $model = Focuses::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -26,10 +29,16 @@ class SliderResource extends Resource
     {
         return $form
             ->schema([
-                //
-                Forms\Components\TextInput::make('name')
+                Forms\Components\TextInput::make('focus_judul')
                     ->required()
-                    ->maxLength(100),
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('focus_description')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\FileUpload::make('focus_image')
+                    ->label('Focus Image')
+                    ->required()
+                    ->image(),
                 Forms\Components\Select::make('is_active')
                     ->label('Is Active')
                     ->options([
@@ -38,18 +47,19 @@ class SliderResource extends Resource
                     ])
                     ->default(1)
                     ->required(),
-                Forms\Components\FileUpload::make('thumbnail')
-                    ->label('Thumbnail')
-                    ->image()
-                    ->required(),
             ]);
     }
+
     public static function table(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('name')
-                    ->label('Title')
+                TextColumn::make('focus_judul')
+                    ->label('Judul')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('focus_description')
+                    ->label('Description')
                     ->searchable()
                     ->sortable(),
                 BooleanColumn::make('is_active')
@@ -57,17 +67,17 @@ class SliderResource extends Resource
                 TextColumn::make('type')
                     ->label('Type')
                     ->sortable(),
-                ImageColumn::make('thumbnail')
+                ImageColumn::make('focus_image')
                     ->disk('public')
-                    ->label('Thumbnail')
+                    ->label('Focus Image')
                     ->square()
                     ->action(
                         Action::make('Lihat Gambar')
                             ->label(false)
                             ->modalWidth('md')
                             // 2. BUNGKUS DENGAN new HtmlString()
-                            ->modalContent(fn (Slider $record): HtmlString => 
-                                new HtmlString('<img src="' . Storage::url($record->thumbnail) . '" class="w-full">')
+                            ->modalContent(fn (Focuses $record): HtmlString => 
+                                new HtmlString('<img src="' . Storage::url($record->focus_image) . '" class="w-full">')
                             )
                             ->modalSubmitAction(false)
                             ->modalCancelAction(false)
@@ -82,7 +92,6 @@ class SliderResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(), // <-- TAMBAHKAN BARIS INI
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -101,9 +110,9 @@ class SliderResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSliders::route('/'),
-            'create' => Pages\CreateSlider::route('/create'),
-            'edit' => Pages\EditSlider::route('/{record}/edit'),
+            'index' => Pages\ListFocuses::route('/'),
+            'create' => Pages\CreateFocuses::route('/create'),
+            'edit' => Pages\EditFocuses::route('/{record}/edit'),
         ];
     }
 }
