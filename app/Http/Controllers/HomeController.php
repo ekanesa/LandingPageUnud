@@ -6,6 +6,11 @@ use App\Models\Roadmap;
 use App\Models\Slider;
 use App\Models\ArticleNews;
 use App\Models\BannerAdvertisemenet;
+use App\Models\Focus;
+use App\Models\Focuses;
+use App\Models\Partnership;
+use App\Models\People;
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,11 +28,16 @@ class HomeController extends Controller
         
         // Fetch all articles to display on the home page (e.g., the 6 latest)
         $articles = ArticleNews::latest()->take(6)->get();
-
-        // Set title
+        // Fetch People data
+        $peoples = People::where('is_active', true)->get();
+        $partnerships = Partnership::where('is_active', 'active')->get();
         $title = 'PT Integrasi Jasa Nusantara';
+        // Fetch Focuses data
+        $focuses = Focuses::where('is_active', true)->get();
+        // Fetch Portfolios data
+        $portfolios = Portfolio::where('is_active', 'active')->get();
         
         // Pass all data to the home view
-        return view('home', compact('roadmapItems', 'sliders', 'title', 'articles', 'banners'));
+        return view('home', compact('roadmapItems', 'sliders', 'title', 'articles', 'banners', 'peoples', 'partnerships','focuses','portfolios'));
     }
 }

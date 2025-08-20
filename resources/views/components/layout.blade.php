@@ -24,7 +24,8 @@
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
   <script src="/resources/js/app.js"></script>
-  <title>iJASA</title>
+  <link rel="icon" href="{{ asset('asset/uceai.jpg') }}" type="image/png" />
+  <title>UCEAI</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
  
 </head>

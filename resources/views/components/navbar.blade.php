@@ -3,9 +3,9 @@
         <div class="flex h-20 items-center justify-between">
             <div class="flex items-center">
                 <div class="flex-shrink-0">
-                    <!-- Tambahkan class untuk mengatur ukuran gambar -->
-                    <a href="/" class="router-link-active router-link-exact-active items-center flex gap-2 px-2"
-                        aria-current="page"><img src="/asset/uceai.jpg" class="h-16 w-36 object-cover" alt="">
+                    <a href="/" class="router-link-active router-link-exact-active items-center flex gap-2 px-2" aria-current="page">
+                        <!-- Ganti class di bawah ini -->
+                        <img src="/asset/UCEAI LOGO.png" class="h-10 w-auto" alt="UCEAI Logo">
                     </a>
                 </div>
             </div>
