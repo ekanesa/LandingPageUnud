@@ -11,9 +11,9 @@
 
             {{-- Content Container --}}
             <div class="relative z-20 max-w-4xl">
-                <h3 data-aos="fade-up" class="text-lg font-semibold md:text-xl">UCEAI</h3>
-                <h1 data-aos="fade-up" data-aos-delay="100" class="mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">Audit, Architect, Scale, and <span class="text-blue-400">Secure a faster</span>, network infrastructure.</h1>
-                <h3 data-aos="fade-up" data-aos-delay="200" class="mx-auto mt-6 max-w-3xl text-base text-gray-200 md:text-xl">(iJASA) merupakan perusahaan yang bergerak dalam bidang Teknologi Informasi khususnya dalam bidang penyediaan akses Internet (Internet Service Provider). Berdiri sejak tahun 2019 dan telah di akuisisi menjadi bagian dari Baliyoni Group.</h3>
+                <h1 data-aos="fade-up" class="text-3xl font-semibold md:text-3xl">UCEAI</h1>
+                {{-- <h1 data-aos="fade-up" data-aos-delay="100" class="mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">Audit, Architect, Scale, and <span class="text-blue-400">Secure a faster</span>, network infrastructure.</h1>
+                <h3 data-aos="fade-up" data-aos-delay="200" class="mx-auto mt-6 max-w-3xl text-base text-gray-200 md:text-xl">(iJASA) merupakan perusahaan yang bergerak dalam bidang Teknologi Informasi khususnya dalam bidang penyediaan akses Internet (Internet Service Provider). Berdiri sejak tahun 2019 dan telah di akuisisi menjadi bagian dari Baliyoni Group.</h3> --}}
                 {{-- <div data-aos="fade-up" data-aos-delay="300" class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                     <a class="group relative inline-flex w-full border border-blue-400 focus:outline-none sm:w-auto" href="#">
                         <span class="inline-flex w-full items-center justify-center self-stretch bg-white px-6 py-3 text-center text-sm font-bold uppercase text-blue-600 ring-1 ring-blue-600 ring-offset-1 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 group-focus:-translate-x-1 group-focus:-translate-y-1">
@@ -36,11 +36,10 @@
 
 
     {{-- Main Content Wrapper with consistent padding and spacing --}}
-    <div class="space-y-20 px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
+    <div class="space-y-20 px-4 sm:px-6 lg:px-8">
         
-        <div class="mx-auto max-w-screen-xl space-y-20">
+        {{-- <div class="mx-auto max-w-screen-xl space-y-20">
             
-            {{-- Feature 1 --}}
             <div data-aos="fade-up" class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
                 <div class="flex justify-center lg:order-last">
                     <img src="asset/img/svg/speed.svg" alt="Gambar" class="h-auto w-64 sm:w-80">
@@ -52,7 +51,6 @@
                 </div>
             </div>
 
-            {{-- Feature 2 --}}
             <div data-aos="fade-up" class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
                 <div class="flex justify-center">
                     <img src="asset/img/svg/hardware-internet.svg" alt="Gambar" class="h-auto w-64 sm:w-80">
@@ -64,7 +62,6 @@
                 </div>
             </div>
 
-            {{-- Feature 3 --}}
             <div data-aos="fade-up" class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
                 <div class="flex justify-center lg:order-last">
                     <img src="asset/img/svg/cs.svg" alt="Gambar" class="h-auto w-64 sm:w-80">
@@ -76,7 +73,6 @@
                 </div>
             </div>
 
-            {{-- Feature 4 --}}
             <div data-aos="fade-up" class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
                 <div class="flex justify-center">
                     <img src="asset/img/svg/choose-card.svg" alt="Gambar" class="h-auto w-64 sm:w-80">
@@ -87,7 +83,7 @@
                     <p class="mx-auto mt-4 max-w-lg leading-relaxed text-gray-700 lg:mx-0">Kami menawarkan berbagai paket layanan yang dapat disesuaikan dengan kebutuhan spesifik Anda. Baik itu koneksi internet rumah tangga, layanan Metro Ethernet untuk bisnis, atau penyimpanan server rack, kami menyediakan solusi yang fleksibel untuk semua sektor termasuk B2G, B2B, dan B2C (soon).</p>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         @include('article_news.catalog_article', ['article' => $articles])
 

@@ -12,9 +12,9 @@
             <!-- Navigasi Desktop -->
             <div class="hidden md:block flex-grow">
                 <div class="ml-10 flex items-baseline justify-center gap-10 font-light">
-                    <a href="/layanan" class="text-white hover:bg-transparent hover:text-black rounded-md">Layanan</a>
+                    <a href="#layanan" class="text-white hover:bg-transparent hover:text-black rounded-md">Layanan</a>
                     <a href="/solusi" class="text-white hover:bg-transparent hover:text-black rounded-md">Solusi</a>
-                    <a href="/harga" class="text-white hover:bg-transparent hover:text-black rounded-md">Harga</a>
+                    {{-- <a href="/harga" class="text-white hover:bg-transparent hover:text-black rounded-md">Harga</a> --}}
                     <a href="{{ route('article.index') }}" class="text-white hover:bg-transparent hover:text-black rounded-md">Berita</a>
                     <a href="/dukungan" class="text-white hover:bg-transparent hover:text-black rounded-md">Dukungan</a>
                     <a href="/partnership" class="text-white hover:bg-transparent hover:text-black rounded-md">Partnership</a>
@@ -57,7 +57,7 @@
         <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
             <a href="/" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Layanan</a>
             <a href="/solusi" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Solusi</a>
-            <a href="/harga" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Harga</a>
+            {{-- <a href="/harga" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Harga</a> --}}
             <a href="{{ route('article.index') }}" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Berita</a>
             <a href="/dukungan" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Dukungan</a>
             <a href="/Partnership" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Partnership</a>

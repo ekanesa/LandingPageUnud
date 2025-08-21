@@ -93,11 +93,17 @@
 <section class="bg-white py-16 sm:py-24">
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Title -->
-        <div class="text-center mb-12">
-            <h3 class="text-3xl sm:text-4xl font-semibold text-gray-800">ROADMAP</h3>
-            <div class="w-24 h-1 bg-yellow-400 mx-auto mt-2"></div>
-        </div>
+       <div class="text-center mb-12">
+            <div class="relative">
 
+                <h2 class="text-2xl font-bold pb-3 text-blue-800 w-96 mx-auto">ROADMAP</h2>
+
+                <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-full h-px bg-blue-800"></div>
+                
+                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-1.5 bg-blue-800"></div>
+
+            </div>              
+        </div>
         <!-- Roadmap Timeline Container -->
         <div class="relative">
             <!-- Center Line -->
@@ -136,7 +142,7 @@
                                                     <div>
                                                         <p class="font-semibold">{{ $item->title }}</p>
                                                         @if($item->description)
-                                                            <p class="text-sm">{{ $item->description }}</p>
+                                                            <p class="text-sm break-words">{{ $item->description }}</p>
                                                         @endif
                                                     </div>
                                                 @endforeach
