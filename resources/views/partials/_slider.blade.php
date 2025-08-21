@@ -1,7 +1,6 @@
 {{-- resources/views/partials/_slider.blade.php --}}
 @if($sliders->isEmpty())
     <div class="flex h-[52vh] items-center justify-center bg-gray-100 md:h-[72vh] lg:h-[92vh]">
-        <p class="text-lg text-gray-500">Galeri Tidak Tersedia Saat Ini</p>
     </div>
 @else
     <div id="slider-container"
@@ -28,19 +27,6 @@
             @endforeach
         </div>
 
-        {{-- <button type="button" id="slider-prev" aria-label="Slide Sebelumnya" class="absolute top-1/2 left-4 z-30 -translate-y-1/2 p-2 bg-black bg-opacity-30 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-        </button>
-
-        <button type="button" id="slider-next" aria-label="Slide Berikutnya" class="absolute top-1/2 right-4 z-30 -translate-y-1/2 p-2 bg-black bg-opacity-30 rounded-full text-white opacity-0 group-hover:opacity-100 transition-opacity">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-        </button>
-
-        <div class="absolute bottom-5 left-1/2 z-30 -translate-x-1/2 flex space-x-3">
-            @foreach($sliders as $slider)
-                <button type="button" class="slider-dot w-3 h-3 rounded-full transition-colors {{ $loop->first ? 'bg-white' : 'bg-white/50' }}" aria-label="Ke Slide {{ $loop->iteration }}"></button>
-            @endforeach
-        </div> --}}
     </div>
 
     <script>

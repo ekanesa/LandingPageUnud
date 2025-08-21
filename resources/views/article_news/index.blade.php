@@ -1,25 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
- {{-- <div class="relative mx-auto w-full h-full overflow-hidden">
-     <!-- Banner Iklan -->
-    <div id="carousel" class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(0);">
-        @foreach ($banners as $banner)
-            <div class="min-w-full h-full relative">
-                <a href="{{ $banner->link }}" target="_blank">
-                    <img src="{{ asset('storage/' . $banner->thumbnail) }}" class="object-cover object-center w-full h-full shadow-sm" alt="Advertisement">
-                </a>
-            </div>
-        @endforeach
-    </div>
-    <!-- Controls -->
-    <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-transparent text-gray-200 px-4 py-2 rounded-full">
-        <span class="iconify" data-icon="akar-icons:arrow-left" data-inline="false"></span>
-    </button>
-    <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-transparent text-gray-200 px-4 py-2 rounded-full">
-        <span class="iconify" data-icon="akar-icons:arrow-right" data-inline="false"></span>
-    </button>
-</div> --}}
 
 <div class="mx-auto max-w-7xl">
 <div class="mt-20 lg:max-w-7xl items-end relative mx-auto grid w-full max-w-2xl gap-x-16 px-6">

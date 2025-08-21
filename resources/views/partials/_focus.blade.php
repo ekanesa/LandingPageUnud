@@ -1,8 +1,12 @@
 <div class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
+            <div class="relative px-4">
+                <h2 class="text-3xl font-bold pb-3 text-blue-800 text-center">FOCUS FIELD</h2>
+                <div class="absolute bottom-1 left-0 w-full h-px bg-blue-800"></div>
+                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/3 h-1.5 bg-blue-800"></div>
+            </div>
         <div class="mx-auto max-w-2xl lg:text-center">
-            <h2 class="text-2xl font-bold mb-12 border-b-4 border-blue-600 w-64 pb-2 inline-block text-black">FOCUS FIELD</h2>
+            
             <p class="text-sm leading-8 text-gray-600">
                 Exploring key areas in technology to create a huge impact on our daily life in the future.
             </p>
@@ -17,7 +21,7 @@
                     <div class="relative flex h-24 w-24 items-center justify-center rounded-lg bg-blue-900 mx-auto">
                         <img src="{{ Storage::url($focus->focus_image) }}" alt="{{ $focus->focus_judul }}" class="h-12 w-12 text-white">
                     </div>
-                    
+
                     <div class="mt-6 flex flex-auto flex-col text-base leading-7 text-gray-600">
                         <h3 class="text-xl font-bold text-gray-900 text-center">{{ $focus->focus_judul }}</h3>
                         <!-- 2. Tambahkan 'text-justify' di sini -->
@@ -34,6 +38,6 @@
 
             </div>
         </div>
-        
+
     </div>
 </div>

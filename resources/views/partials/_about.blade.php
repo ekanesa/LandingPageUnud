@@ -1,4 +1,4 @@
-<div class="bg-blue-800 text-white w-full">
+<div id="layanan" class="bg-blue-900 text-white w-full">
     <p class="text-center text-sm">
         Experience The Future Of Technology With Us
         <span class="text-white justify-center flex">
@@ -13,8 +13,15 @@
                 <img src="/asset/uceai.jpg" alt="About Us Image" class="rounded-lg shadow-lg">
             </div>
             <div class="fade-up text-center lg:text-left" data-aos="fade-up">
-                <h2 class="text-3xl font-bold md:text-4xl">ABOUT US</h2>
-                <div class="mt-2 h-1 w-24 bg-yellow-400 lg:mx-0 mx-auto"></div>
+                <div class="relative">
+
+                    <h2 class="text-2xl font-bold pb-3 text-white w-96">ABOUT US</h2>
+
+                    <div class="absolute bottom-1 left-0 w-full h-0.5 bg-white"></div>
+                    
+                    <div class="absolute bottom-0 left-0 w-1/3 h-1.5 bg-white"></div>
+
+                </div>                 
                 <p class="mt-6 leading-relaxed">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias deleniti ex aliquam eligendi asperiores nihil illum nesciunt quisquam dolorem unde. Delectus saepe, ipsam blanditiis ducimus suscipit ad aliquid pariatur vitae!
                 </p>

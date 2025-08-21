@@ -4,9 +4,16 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <div>
-                <h2 class="text-3xl font-bold uppercase">Portfolio</h2>
-                <div class="w-24 h-1 bg-yellow-400 my-4"></div>
-                <p class="text-gray-300 leading-relaxed">
+                <div class="relative ">
+
+                    <h2 class="text-2xl font-bold pb-3 text-white w-96">PORTFOLIO</h2>
+
+                    <div class="absolute bottom-1 left-0 w-full h-0.5 bg-white"></div>
+                    
+                    <div class="absolute bottom-0 left-0 w-1/3 h-1.5 bg-white"></div>
+
+                </div>     
+                <p class="text-gray-300 leading-relaxed mt-4">
                     We have been actively engaged in technological innovation in order to become a focal point for the development and dissemination of artificial intelligence and digital technology in Indonesia.
                 </p>
             </div>
@@ -24,7 +31,6 @@
                 </div>
             </div>
             @empty
-            <p class="md:col-span-2 lg:col-span-3 text-center text-gray-400 py-12">No portfolio items to display.</p>
             @endforelse
 
         </div>

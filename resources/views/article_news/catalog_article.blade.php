@@ -1,10 +1,17 @@
-<div class="flex flex-col lg:flex-row gap-8 max-w-screen mx-auto mt-20 px-4">
+<div class="flex flex-col lg:flex-row gap-8 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
     <div class="w-full lg:w-2/3">
         <!-- PERBAIKAN: Menambahkan 'mt-8' agar sejajar dengan kolom kanan -->
         <div data-aos-delay="200" data-aos="fade-down" data-aos-easing="ease-in-out" class="mt-8">
             <!-- Judul untuk kolom kiri -->
-            <h2 class="text-2xl font-bold mb-4 border-b-4 border-blue-400 pb-2 inline-block w-64">LATEST NEWS</h2>
-            
+                <div class="relative ">
+
+                    <h2 class="text-2xl font-bold pb-3 text-blue-800 w-96">LATEST NEWS</h2>
+
+                    <div class="absolute bottom-1 left-0 w-full h-0.5 bg-blue-800"></div>
+                    
+                    <div class="absolute bottom-0 left-0 w-1/3 h-1.5 bg-blue-800"></div>
+
+                </div>            
             <div id="Solutions" class="my-6">
                 <!-- Grid untuk artikel, sekarang responsif di dalam kolomnya -->
                 <div class="gap-8 grid grid-cols-2 sm:grid-cols-3">
@@ -40,20 +47,5 @@
         </div>
     </div>
 
-    <!-- ======================================================= -->
-    <!-- KOLOM KANAN: Spanduk Informasi (1/3 dari lebar layar) -->
-    <!-- ======================================================= -->
-    <div class="w-full lg:w-1/3">
-        <!-- Dibuat 'sticky' agar tetap terlihat saat menggulir -->
-        <div class=" top-24">
-             <div data-aos-delay="200" data-aos="fade-down" data-aos-easing="ease-in-out" class="mt-8">
-                <!-- Judul untuk kolom kanan -->
-                <h2 class="text-2xl font-bold mb-4 border-b-4 border-blue-400 pb-2 inline-block w-64">INFORMATION</h2>
-                <div class="mt-4 rounded-lg shadow-lg overflow-hidden">
-                    <!-- Ganti 'src' ini dengan path ke gambar spanduk Anda -->
-                    <img src="https://placehold.co/600x800/FDBF2D/333333?text=Your%0AInformation%0ABanner%0AHere" alt="Information Banner" class="w-full h-[600px] object-cover object-center">
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('partials._information')
 </div>

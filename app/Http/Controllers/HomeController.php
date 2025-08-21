@@ -6,7 +6,7 @@ use App\Models\Roadmap;
 use App\Models\Slider;
 use App\Models\ArticleNews;
 use App\Models\BannerAdvertisemenet;
-use App\Models\Focus;
+use App\Models\BannerInformation;
 use App\Models\Focuses;
 use App\Models\Partnership;
 use App\Models\People;
@@ -36,8 +36,19 @@ class HomeController extends Controller
         $focuses = Focuses::where('is_active', true)->get();
         // Fetch Portfolios data
         $portfolios = Portfolio::where('is_active', 'active')->get();
+        // Ambil banner persegi terbaru yang aktif
+        $squareBanner = BannerInformation::where('is_active', true)
+                                        ->where('type', 'square')
+                                        ->latest()
+                                        ->first();
+
+        // Ambil banner persegi panjang terbaru yang aktif
+        $rectangularBanner = BannerInformation::where('is_active', true)
+                                            ->where('type', 'rectangle')
+                                            ->latest()
+                                            ->first();
         
         // Pass all data to the home view
-        return view('home', compact('roadmapItems', 'sliders', 'title', 'articles', 'banners', 'peoples', 'partnerships','focuses','portfolios'));
+        return view('home', compact('roadmapItems', 'sliders', 'title', 'articles', 'banners', 'peoples', 'partnerships','focuses','portfolios', 'squareBanner', 'rectangularBanner'));
     }
 }
