@@ -1,5 +1,5 @@
-<section class="bg-white py-16 sm:py-24">
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+<section  class="bg-white py-16 sm:py-24">
+    <div id="roadmap" class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Title -->
         <div class="text-center mb-12">
             <h3 class="text-3xl sm:text-4xl font-semibold text-gray-800">ROADMAP</h3>

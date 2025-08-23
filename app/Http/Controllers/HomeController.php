@@ -40,13 +40,13 @@ class HomeController extends Controller
         $squareBanner = BannerInformation::where('is_active', true)
                                         ->where('type', 'square')
                                         ->latest()
-                                        ->first();
+                                        ->get();
 
         // Ambil banner persegi panjang terbaru yang aktif
         $rectangularBanner = BannerInformation::where('is_active', true)
                                             ->where('type', 'rectangle')
                                             ->latest()
-                                            ->first();
+                                            ->get();
         
         // Pass all data to the home view
         return view('home', compact('roadmapItems', 'sliders', 'title', 'articles', 'banners', 'peoples', 'partnerships','focuses','portfolios', 'squareBanner', 'rectangularBanner'));

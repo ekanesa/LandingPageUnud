@@ -1,4 +1,4 @@
-<div class="flex flex-col lg:flex-row gap-8 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+<div id="news" class="flex flex-col lg:flex-row gap-8 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">
     <div class="w-full lg:w-2/3">
         <!-- PERBAIKAN: Menambahkan 'mt-8' agar sejajar dengan kolom kanan -->
         <div data-aos-delay="200" data-aos="fade-down" data-aos-easing="ease-in-out" class="mt-8">

@@ -1,4 +1,4 @@
-<div class="bg-white py-24 sm:py-32">
+<div id="focus" class="bg-white py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
             <div class="relative px-4">
                 <h2 class="text-3xl font-bold pb-3 text-blue-800 text-center">FOCUS FIELD</h2>

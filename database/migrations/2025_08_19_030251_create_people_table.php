@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('people', function (Blueprint $table) {
             $table->id();
             $table->string('people');
+            $table->string('people_position');
             $table->string('people_avatar');
             $table->enum('is_active',['active','not_active'])->default('not_active');
             $table->timestamps();
