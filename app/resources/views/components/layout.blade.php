@@ -48,6 +48,6 @@
   <script>
     AOS.init();
   </script>
-  {{-- <x-whatsapp-button /> --}}
+  <x-whatsapp-button />
 </body>
 </html>

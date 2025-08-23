@@ -1,4 +1,4 @@
-<div id="layanan" class="bg-blue-900 text-white w-full">
+<div id="about" class="bg-blue-900 text-white w-full">
     <p class="text-center text-sm">
         Experience The Future Of Technology With Us
         <span class="text-white justify-center flex">

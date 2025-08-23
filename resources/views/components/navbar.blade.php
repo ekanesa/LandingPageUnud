@@ -1,73 +1,75 @@
-<nav class="bg-blue-500/50 drop-shadow-md backdrop-blur-sm fixed top-0 z-50 left-0 w-full" x-data="{ isOpen: false }">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
-        <div class="flex h-20 items-center justify-between">
-            <div class="flex items-center">
-                <div class="flex-shrink-0">
-                    <a href="/" class="router-link-active router-link-exact-active items-center flex gap-2 px-2" aria-current="page">
-                        <!-- Ganti class di bawah ini -->
-                        <img src="/asset/UCEAI LOGO.png" class="h-10 w-auto" alt="UCEAI Logo">
-                    </a>
-                </div>
+
+
+    <!-- Diperlukan untuk Alpine.js -->
+<script src="//unpkg.com/alpinejs" defer></script>
+
+<nav class="bg-blue-900/20 border-b-2 border-blue-900 backdrop-blur-sm fixed top-0 z-50 w-full" x-data="{ mobileOpen: false }">
+    <!-- 1. Buat satu kontainer utama yang menjadi acuan posisi ('relative') -->
+    <div class="relative max-w-7xl mx-auto px-4">
+
+        <!-- Main Navigation Bar (Dasar) -->
+        <div class="flex items-center justify-between h-32">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="/" aria-current="page">
+                    <img src="/asset/UCEAI LOGO.png" class="h-16 w-auto" alt="UCEAI Logo">
+                </a>
             </div>
-            <!-- Navigasi Desktop -->
-            <div class="hidden md:block flex-grow">
-                <div class="ml-10 flex items-baseline justify-center gap-10 font-light">
-                    <a href="#layanan" class="text-white hover:bg-transparent hover:text-black rounded-md">Layanan</a>
-                    <a href="/solusi" class="text-white hover:bg-transparent hover:text-black rounded-md">Solusi</a>
-                    {{-- <a href="/harga" class="text-white hover:bg-transparent hover:text-black rounded-md">Harga</a> --}}
-                    <a href="{{ route('article.index') }}" class="text-white hover:bg-transparent hover:text-black rounded-md">Berita</a>
-                    <a href="/dukungan" class="text-white hover:bg-transparent hover:text-black rounded-md">Dukungan</a>
-                    <a href="/partnership" class="text-white hover:bg-transparent hover:text-black rounded-md">Partnership</a>
-                    <a href="/gallery" class="text-white hover:bg-transparent hover:text-black rounded-md">Gallery</a>
-                </div>
-            </div>
-            <!-- Tombol Hubungi Kami di Desktop -->
-            <div class="hidden md:block">
-                <div class="ml-4 flex items-center md:ml-6 mb-4">
-                    <a class="group relative inline-flex border border-blue-600 focus:outline-none mt-6"
-                        href="/hubungi">
-                        <span
-                            class="w-full inline-flex items-center justify-center self-stretch px-4 py-2 text-sm text-blue-600 text-center font-bold uppercase bg-white ring-1 ring-blue-600 ring-offset-1 transform transition-transform group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1">
-                            Hubungi Kami
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <!-- Tombol Menu Mobile -->
-            <div class="-mr-2 flex md:hidden">
-                <button type="button" @click="isOpen = !isOpen"
-                    class="inline-flex items-center justify-center rounded-md bg-transparent p-2 text-gray-400 hover:bg-blue-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-transparent focus:ring-offset-2 focus:ring-offset-transparent">
-                    <span class="sr-only">Open main menu</span>
-                    <svg x-show="!isOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                    </svg>
-                    <svg x-show="isOpen" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+
+            <!-- Desktop Main Menu -->
+            <!-- 2. Hapus 'mt-16' dan perbaiki warna teks -->
+            <div class="hidden lg:flex items-center space-x-12 text-sm font-semibold text-gray-700 mt-14">
+                <a href="#about" class="hover:text-blue-600 text-white transition-colors">ABOUT</a>
+                <a href="#focus" class="hover:text-blue-600  text-white transition-colors">FOCUS FIELD</a>
+                <a href="#roadmap" class="hover:text-blue-600  text-white transition-colors">ROADMAP</a>
+                <a href="#product" class="hover:text-blue-600  text-white transition-colors">PRODUCT & SERVICES</a>
             </div>
         </div>
+
+        <!-- Top Bar (Melayang di atas) -->
+        <!-- 3. Posisikan 'absolute' di dalam kontainer utama -->
+        <!-- 'right-4' digunakan untuk mengimbangi 'px-4' dari kontainer -->
+        <div class="hidden lg:block absolute top-0 right-4 h-14 bg-blue-900 rounded-bl-lg">
+            <div class="flex items-center h-full divide-x divide-gray-400 text-xs text-gray-300">
+                <a href="#partner" class="px-3 hover:text-white transition-colors">ACTIVE PARTNER</a>
+                <a href="#portfolio" class="px-3 hover:text-white transition-colors">PORTFOLIO</a>
+                <a href="#news" class="px-3 hover:text-white transition-colors">NEWS & INFORMATION</a>
+                <a href="#people" class="px-3 hover:text-white transition-colors">EXPERT TEAMS</a>
+                <a href="/hubungi" class="px-3 hover:text-white transition-colors">CONTACT US</a>
+            </div>
+        </div>
+
+        <!-- Tombol Menu Mobile (di dalam container utama) -->
+        <div class="absolute top-0 right-0 pt-6 pr-4 lg:hidden">
+             <button @click="mobileOpen = !mobileOpen" class="text-gray-800 p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path x-show="!mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path x-show="mobileOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+
     </div>
 
-    <!-- Mobile menu, tampil hanya jika isOpen bernilai true -->
-    <div class="md:hidden" x-show="isOpen">
-        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-            <a href="/" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Layanan</a>
-            <a href="/solusi" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Solusi</a>
-            {{-- <a href="/harga" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Harga</a> --}}
-            <a href="{{ route('article.index') }}" class="text-black hover:bg-transparent hover:text-blue-600 rounded-md">Berita</a>
-            <a href="/dukungan" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Dukungan</a>
-            <a href="/Partnership" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Partnership</a>
-            <a href="/galery" class="block text-black hover:bg-transparent hover:text-blue-600 rounded-md">Gallery</a>
-        </div>
-        <div class="px-5">
-            <button type="button"
-                class="w-full text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2">
-                Hubungi Kami
-            </button>
+    <!-- Mobile Menu Panel (tetap di luar kontainer utama) -->
+    <div x-show="mobileOpen" x-transition class="lg:hidden bg-white shadow-lg">
+        <div class="px-4 py-4 space-y-2">
+            <!-- Main menu items for mobile -->
+            <a href="#about" @click="mobileOpen = false" class="block text-gray-700 py-2 px-3 hover:bg-gray-100 rounded font-medium">ABOUT</a>
+            <a href="#focus" @click="mobileOpen = false" class="block text-gray-700 py-2 px-3 hover:bg-gray-100 rounded font-medium">FOCUS FIELD</a>
+            <a href="#roadmap" @click="mobileOpen = false" class="block text-gray-700 py-2 px-3 hover:bg-gray-100 rounded font-medium">ROADMAP</a>
+            <a href="#product" @click="mobileOpen = false" class="block text-gray-700 py-2 px-3 hover:bg-gray-100 rounded font-medium">PRODUCT & SERVICES</a>
+
+            <!-- Top menu items for mobile -->
+            <div class="border-t pt-3 mt-3">
+                <div class="grid grid-cols-2 gap-2 text-xs">
+                    <a href="#partner" class="bg-gray-100 px-2 py-2 text-gray-800 text-center rounded">ACTIVE PARTNER</a>
+                    <a href="#portfolio" class="bg-gray-100 px-2 py-2 text-gray-800 text-center rounded">PORTFOLIO</a>
+                    <a href="#news" class="bg-gray-100 px-2 py-2 text-gray-800 text-center rounded">NEWS & INFO</a>
+                    <a href="#people" class="bg-gray-100 px-2 py-2 text-gray-800 text-center rounded">EXPERT TEAMS</a>
+                    <a href="#hubungi" class="bg-gray-100 px-2 py-2 text-gray-800 text-center rounded">CONTACT US</a>
+                </div>
+            </div>
         </div>
     </div>
 </nav>

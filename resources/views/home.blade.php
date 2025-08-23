@@ -10,27 +10,20 @@
         <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black bg-opacity-40 p-4 text-center text-white">
 
             {{-- Content Container --}}
+            <a href="/project-hand-gesture-main/landing.html" class="text-xl font-bold md:text-xl bg-blue-900 text-white px-10 py-2 mb-8">Try It Now!</a>
+
             <div class="relative z-20 max-w-4xl">
-                <h1 data-aos="fade-up" class="text-3xl font-semibold md:text-3xl">UCEAI</h1>
-                {{-- <h1 data-aos="fade-up" data-aos-delay="100" class="mt-4 text-3xl font-bold leading-tight sm:text-4xl md:text-6xl">Audit, Architect, Scale, and <span class="text-blue-400">Secure a faster</span>, network infrastructure.</h1>
-                <h3 data-aos="fade-up" data-aos-delay="200" class="mx-auto mt-6 max-w-3xl text-base text-gray-200 md:text-xl">(iJASA) merupakan perusahaan yang bergerak dalam bidang Teknologi Informasi khususnya dalam bidang penyediaan akses Internet (Internet Service Provider). Berdiri sejak tahun 2019 dan telah di akuisisi menjadi bagian dari Baliyoni Group.</h3> --}}
-                {{-- <div data-aos="fade-up" data-aos-delay="300" class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <a class="group relative inline-flex w-full border border-blue-400 focus:outline-none sm:w-auto" href="#">
-                        <span class="inline-flex w-full items-center justify-center self-stretch bg-white px-6 py-3 text-center text-sm font-bold uppercase text-blue-600 ring-1 ring-blue-600 ring-offset-1 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 group-focus:-translate-x-1 group-focus:-translate-y-1">
-                            Hubungi Kami
-                        </span>
-                    </a>
-                    <a class="group relative inline-flex w-full border border-gray-200 focus:outline-none sm:w-auto" href="#">
-                        <span class="inline-flex w-full items-center justify-center self-stretch bg-white px-6 py-3 text-center text-sm font-bold uppercase text-gray-800 ring-1 ring-gray-200 ring-offset-1 transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1 group-focus:-translate-x-1 group-focus:-translate-y-1">
-                            Layanan
-                        </span>
-                    </a>
-                </div> --}}
+                <h1 data-aos="fade-up" class="text-3xl font-bold md:text-3xl bg-yellow-500 text-blue-700 px-10 py-4 ">
+                    UDAYANA CENTER OF <br>
+                    EXCELENT AI INNOVATION
+                </h1>
             </div>
         </div>
     </div>
+    
     @include('partials._about')
     @include('partials.roadmaps')
+    @include('partials._product')
 
     {{-- Main Content --}}
 

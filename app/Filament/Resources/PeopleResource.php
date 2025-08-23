@@ -30,6 +30,9 @@ class PeopleResource extends Resource
                 Forms\Components\TextInput::make('people')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('people_position')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\FileUpload::make('people_avatar')
                     ->label('Avatar')
                     ->required()
@@ -51,6 +54,10 @@ class PeopleResource extends Resource
             ->columns([
                 TextColumn::make('people')
                     ->label('People')
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('people_position')
+                    ->label('Position')
                     ->searchable()
                     ->sortable(),
                 BooleanColumn::make('is_active')

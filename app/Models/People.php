@@ -8,6 +8,7 @@ class People extends Model
 {
     protected $fillable = [
         'people',
+        'people_position',
         'people_avatar',
         'is_active',
     ];
