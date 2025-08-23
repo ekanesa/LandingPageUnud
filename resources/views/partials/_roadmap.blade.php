@@ -1,5 +1,5 @@
-<section  class="bg-white py-16 sm:py-24">
-    <div id="roadmap" class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+{{-- <section class="bg-white py-16 sm:py-24">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Title -->
         <div class="text-center mb-12">
             <h3 class="text-3xl sm:text-4xl font-semibold text-gray-800">ROADMAP</h3>
@@ -9,119 +9,192 @@
         <!-- Roadmap Timeline Container -->
         <div class="relative">
             <!-- Center Line -->
-            <div class="absolute left-1/2 top-2 h-full w-1 bg-blue-800 transform -translate-x-1/2"></div>
+            <div class="absolute left-1/2 top-2 h-full w-1 bg-blue-800 transform -translate-x-1/2 hidden md:block"></div>
 
             <!-- Timeline Items -->
             <div class="relative flex flex-col space-y-12">
 
-                <!-- === 2024 Section === -->
-                <div class="flex flex-col md:flex-row items-start">
-                    <!-- Left Side (Content) -->
-                    <div class="w-full md:w-1/2 md:pr-12">
-                        <div class="bg-white p-6 rounded-lg">
-                            <h4 class="text-2xl font-bold text-blue-800 mb-4">2024</h4>
-                            
-                            <!-- AI Category -->
-                            <div class="mb-6">
-                                <h5 class="font-bold text-gray-700">ARTIFICIAL INTELLIGENCE</h5>
-                                <div class="mt-2 pl-4 text-gray-600 space-y-2">
-                                    <div>
-                                        <p class="font-semibold">Autonomous Vehicle</p>
-                                        <p class="text-sm">Unmanned Aerial Vehicle and Its Applications</p>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold">Robotics</p>
-                                        <p class="text-sm">Collaborative Robot Machine, Farming and Agricultural Robot, Robotic Applications in Medicine, Special Purpose Robot System</p>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold">Smart City</p>
-                                        <p class="text-sm">Smart Policing, Smart Environment, Energy, Power, and Control System</p>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold">Business Intelligence</p>
-                                        <p class="text-sm">Process Optimization, Contextual based Processing, Knowledge Management</p>
-                                    </div>
-                                     <div>
-                                        <p class="font-semibold">Education and Research</p>
-                                        <p class="text-sm">Intelligent Online Learning, Game Technology, Smart Course Content with AR/VR</p>
-                                    </div>
-                                </div>
-                            </div>
+                @foreach($roadmapItems as $year => $items)
+                    @php
+                        // Determine the side based on the first item for that year
+                        $side = $items->first()->side ?? 'left'; 
+                    @endphp
 
-                            <!-- Health Tech Category -->
-                            <div>
-                                <h5 class="font-bold text-gray-700">HEALTH TECHNOLOGY</h5>
-                                <div class="mt-2 pl-4 text-gray-600 space-y-2">
-                                    <div>
-                                        <p class="font-semibold">Smart Medical Diagnosis</p>
-                                        <p class="text-sm">Medical Data Analytics, Advance Brain Research</p>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold">Tele-Health</p>
-                                        <p class="text-sm">Treatment Automation, Virtual Nursing Assistant</p>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold">Assistive Technology and Medical Rehabilitation</p>
-                                        <p class="text-sm">Personal Emergency Response Systems, Devices for Rehabilitation and Physical Therapy</p>
-                                    </div>
+                    <div class="flex flex-col md:flex-row items-start">
+                        
+                        <!-- Left Side Content -->
+                        <div class="w-full md:w-1/2 @if($side === 'left') md:pr-12 @else hidden md:block @endif">
+                            @if($side === 'left')
+                                <div class="bg-gray-100 p-6 rounded-lg">
+                                    <h4 class="text-2xl font-bold text-blue-800 mb-4">{{ $year }}</h4>
+                                    @foreach($items->groupBy('category') as $category => $categoryItems)
+                                        <div class="mb-6">
+                                            @if($category)
+                                                <h5 class="font-bold text-gray-700 uppercase">{{ $category }}</h5>
+                                            @endif
+                                            <div class="mt-2 @if($category) pl-4 @endif text-gray-600 space-y-2">
+                                                @foreach($categoryItems as $item)
+                                                    <div>
+                                                        <p class="font-semibold">{{ $item->title }}</p>
+                                                        @if($item->description)
+                                                            <p class="text-sm">{{ $item->description }}</p>
+                                                        @endif
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
-                            </div>
+                            @endif
+                        </div>
+
+                        <!-- Timeline Marker -->
+                        <div class="absolute left-1/2 top-0 transform -translate-x-1/2">
+                            <div class="w-5 h-5 bg-yellow-400 rounded-full border-4 border-blue-800"></div>
+                        </div>
+
+                        <!-- Right Side Content -->
+                        <div class="w-full md:w-1/2 @if($side === 'right') md:pl-12 @else hidden md:block @endif">
+                             @if($side === 'right')
+                                <div class="bg-white p-6 rounded-lg">
+                                    <div class="space-y-4 mb-6">
+                                        @foreach($items->whereIn('type', ['Excellence Research', 'Supporting Research']) as $item)
+                                            <div class="{{ $item->type === 'Excellence Research' ? 'bg-green-600' : 'bg-blue-600' }} text-white p-3 rounded-md text-center font-semibold">
+                                                {{ $item->title }}
+                                            </div>
+                                        @endforeach
+                                    </div>
+
+                                    <h4 class="text-2xl font-bold text-blue-800 mb-4">{{ $year }}</h4>
+                                    
+                                    @foreach($items->where('type', 'Topic')->groupBy('category') as $category => $categoryItems)
+                                    <div class="mb-6">
+                                        @if($category)
+                                            <h5 class="font-bold text-gray-700 uppercase">{{ $category }}</h5>
+                                        @endif
+                                        <div class="mt-2 text-gray-600 space-y-2 text-sm">
+                                            @foreach($categoryItems as $item)
+                                                <p>{{ $item->title }}</p>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            @endif
                         </div>
                     </div>
-                    <!-- Timeline Marker -->
-                    <div class="absolute left-1/2 top-0 transform -translate-x-1/2">
-                        <div class="w-5 h-5 bg-yellow-400 rounded-full border-4 border-blue-800"></div>
-                    </div>
-                    <!-- Right Side (Empty Spacer) -->
-                    <div class="hidden md:block w-1/2"></div>
-                </div>
+                @endforeach
 
-                <!-- === 2025-2029 Section === -->
-                <div class="flex flex-col md:flex-row items-start">
-                    <!-- Left Side (Empty Spacer) -->
-                    <div class="hidden md:block w-1/2"></div>
-                    <!-- Timeline Marker -->
-                    <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-auto md:translate-y-0">
-                         <div class="w-5 h-5 bg-yellow-400 rounded-full border-4 border-blue-800"></div>
-                    </div>
-                    <!-- Right Side (Content) -->
-                    <div class="w-full md:w-1/2 md:pl-12">
-                        <div class="bg-white p-6 rounded-lg">
-                            <div class="space-y-4 mb-6">
-                                <div class="bg-green-600 text-white p-3 rounded-md text-center font-semibold">
-                                    Excellence Research
-                                </div>
-                                <div class="bg-blue-600 text-white p-3 rounded-md text-center font-semibold">
-                                    Supporting Research
-                                </div>
-                            </div>
+            </div>
+        </div>
+    </div>
+</section> --}}
 
-                            <h4 class="text-2xl font-bold text-blue-800 mb-4">2025-2029</h4>
-                            
-                            <div class="mb-6">
-                                <h5 class="font-bold text-gray-700">TOPIC RESEARCH</h5>
-                                <div class="mt-2 text-gray-600 space-y-2 text-sm">
-                                    <p>Industrial 4.0 and Society 5.0 Implementation</p>
-                                    <p>AI in Maritime (2025-2029)</p>
-                                    <p>AI in Agriculture (2025-2026)</p>
-                                    <p>Model for Student Success Prediction (2025-2027)</p>
-                                    <p>Robotics Education (2026-2027)</p>
-                                    <p>AI, IoT, or Robotics in Industry/Logistics (2026-2028)</p>
-                                    <p>AI in Energy and Power System (2027-2029)</p>
-                                    <p>Bioinformatics (2025-2029)</p>
-                                    <p>AI in Finance (2025-2026)</p>
-                                    <p>AI in Game (2027-2029)</p>
-                                    <p>Robot Service (2025-2027)</p>
-                                    <p>Collaborative robots (2028-2029)</p>
-                                    <p>AI, IoT, or Robotics for special purpose (2025-2029)</p>
-                                    <p>Autonomous Vehicle (2025-2027)</p>
-                                    <p>Control System Application (2027-2029)</p>
-                                    <p>Drone, UAV (Unmanned Aerial Vehicle) & USV (Unmanned Surface Vehicle) (2025-2027)</p>
+<section id="roadmap" class="bg-white py-16 sm:py-24">
+    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Title -->
+       <div class="text-center mb-12">
+            <div class="relative">
+
+                <h2 class="text-2xl font-bold pb-3 text-blue-800 w-96 mx-auto">ROADMAP</h2>
+
+                <div class="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-full h-px bg-blue-800"></div>
+                
+                <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-1.5 bg-blue-800"></div>
+
+            </div>              
+        </div>
+        <!-- Roadmap Timeline Container -->
+        <div class="relative">
+            <!-- Center Line -->
+            <div class="absolute left-1/2 top-2 h-full w-1 bg-blue-800 transform -translate-x-1/2 hidden md:block"></div>
+
+            <!-- Timeline Items -->
+            <div class="relative flex flex-col space-y-12">
+
+                @foreach($roadmapItems as $year => $items)
+                    @php
+                        $side = $items->first()->side ?? 'left'; 
+                    @endphp
+
+                    <div class="flex flex-col md:flex-row items-start relative">
+                        
+                        <!-- Left Side Content -->
+                        <div class="w-full md:w-1/2 @if($side === 'left') md:pr-6 @else hidden md:block @endif">
+                            @if($side === 'left')
+                                <!-- Tambahkan 'relative' di sini -->
+                                <div class="bg-gray-100 p-6 rounded-lg relative">
+                                    <!-- SEGITIGA PENUNJUK KIRI -->
+                                    <div class="absolute top-8 -right-2 w-0 h-0 
+                                        border-t-[15px] border-t-transparent
+                                        border-l-[15px] border-l-gray-100
+                                        border-b-[15px] border-b-transparent">
+                                    </div>
+
+                                    <h4 class="text-2xl font-bold text-blue-800 mb-4">{{ $year }}</h4>
+                                    @foreach($items->groupBy('category') as $category => $categoryItems)
+                                        <div class="mb-6">
+                                            @if($category)
+                                                <h5 class="font-bold text-gray-700 uppercase">{{ $category }}</h5>
+                                            @endif
+                                            <div class="mt-2 @if($category) pl-4 @endif text-gray-600 space-y-2">
+                                                @foreach($categoryItems as $item)
+                                                    <div>
+                                                        <p class="font-semibold">{{ $item->title }}</p>
+                                                        @if($item->description)
+                                                            <p class="text-sm break-words">{{ $item->description }}</p>
+                                                        @endif
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
-                            </div>
+                            @endif
+                        </div>
+
+                        <!-- Timeline Marker -->
+                        <div class="absolute left-1/2 top-8 transform -translate-x-1/2 z-10">
+                            <div class="w-5 h-5 bg-yellow-400 rounded-full border-4 border-blue-800"></div>
+                        </div>
+
+                        <!-- Right Side Content -->
+                        <div class="w-full md:w-1/2 @if($side === 'right') md:pl-6 @else hidden md:block @endif">
+                             @if($side === 'right')
+                                <!-- Tambahkan 'relative' di sini -->
+                                <div class="bg-gray-100 p-6 rounded-lg relative">
+                                     <!-- SEGITIGA PENUNJUK KANAN -->
+                                    <div class="absolute top-8 -left-2 w-0 h-0 
+                                        border-t-[15px] border-t-transparent
+                                        border-r-[15px] border-r-gray-100
+                                        border-b-[15px] border-b-transparent">
+                                    </div>
+
+                                    <div class="space-y-4 mb-6">
+                                        @foreach($items->whereIn('type', ['Excellence Research', 'Supporting Research']) as $item)
+                                            <div class="{{ $item->type === 'Excellence Research' ? 'bg-green-600' : 'bg-blue-600' }} text-white p-3 rounded-md text-center font-semibold">
+                                                {{ $item->title }}
+                                            </div>
+                                        @endforeach
+                                    </div>
+                                    <h4 class="text-2xl font-bold text-blue-800 mb-4">{{ $year }}</h4>
+                                    @foreach($items->where('type', 'Topic')->groupBy('category') as $category => $categoryItems)
+                                    <div class="mb-6">
+                                        @if($category)
+                                            <h5 class="font-bold text-gray-700 uppercase">{{ $category }}</h5>
+                                        @endif
+                                        <div class="mt-2 text-gray-600 space-y-2 text-sm">
+                                            @foreach($categoryItems as $item)
+                                                <p>{{ $item->title }}</p>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    @endforeach
+                                </div>
+                            @endif
                         </div>
                     </div>
-                </div>
+                @endforeach
 
             </div>
         </div>
