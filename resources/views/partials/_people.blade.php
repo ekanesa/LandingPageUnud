@@ -15,7 +15,7 @@
                 <div class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-2 overflow-hidden shadow-lg">
                     <img src="{{ Storage::url($person->people_avatar) }}" class="w-full h-full object-cover" alt="{{ $person->people }}">
                 </div>
-                <p class="text-white font-semibold mt-4 text-sm">{{ $person->people }}</p>
+                <p class="text-white font-semibold mt-4 text-sm">{{ $person->people }} <br>{{ $person->people_position }}</p>
             </div>
             @endforeach
         </div>
