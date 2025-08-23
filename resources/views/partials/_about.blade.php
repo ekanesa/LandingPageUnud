@@ -10,23 +10,26 @@
         <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
             <div class="flex justify-center" data-aos="fade-up">
                 {{-- Ganti 'path/to/your/image.jpg' dengan path gambar Anda --}}
+                {{-- <iframe width="560" height="315" src="https://www.youtube.com/embed/SLO1oPmkVvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg shadow-lg h-64 w-full object-cover lg:h-96"></iframe> --}}
                 <img src="/asset/uceai.jpg" alt="About Us Image" class="rounded-lg shadow-lg">
+
             </div>
             <div class="fade-up text-center lg:text-left" data-aos="fade-up">
                 <div class="relative">
 
-                    <h2 class="text-2xl font-bold pb-3 text-white w-96">ABOUT US</h2>
+                    <h2 class="text-2xl font-bold pb-3 text-white w-72">ABOUT US</h2>
 
                     <div class="absolute bottom-1 left-0 w-full h-0.5 bg-white"></div>
                     
                     <div class="absolute bottom-0 left-0 w-1/3 h-1.5 bg-white"></div>
 
                 </div>                 
-                <p class="mt-6 leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias deleniti ex aliquam eligendi asperiores nihil illum nesciunt quisquam dolorem unde. Delectus saepe, ipsam blanditiis ducimus suscipit ad aliquid pariatur vitae!
+                <p class="mt-6 leading-relaxed text-justify">
+                    Pusat Kajian Kecerdasan Artifisial (AI) Universitas Udayana merupakan unit kajian strategis di lingkungan Universitas Udayana:
                 </p>
-                <p class="mt-4 leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore velit libero voluptatum accusantium. Voluptate quasi vel nobis fugit! Atque numquam ea autem fugit quia, delectus nostrum eaque alias libero quidem.
+                <p class="mt-4 leading-relaxed text-justify">
+                        Berfokus pada pengembangan, penelitian, inovasi, dan penerapan teknologi kecerdasan artificial (AI) untuk menjawab tantangan lokal, nasional, dan global, khususnya dalam konteks keunikan budaya, masyarakat, dan potensi wilayah Bali dan Indonesia Timur.
+                        <br>Sebagai bagian dari komitmen Unud dalam mendukung transformasi digital nasional, pusat kajian ini berperan sebagai inkubator keilmuan dan inovasi AI lintas disiplin yang bersinergi dengan pemerintah, industri, dan masyarakat untuk menciptakan solusi cerdas berbasis kearifan lokal.
                 </p>
             </div>
         </div>
