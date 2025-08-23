@@ -22,11 +22,12 @@
                     <div class="absolute bottom-0 left-0 w-1/3 h-1.5 bg-white"></div>
 
                 </div>                 
-                <p class="mt-6 leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias deleniti ex aliquam eligendi asperiores nihil illum nesciunt quisquam dolorem unde. Delectus saepe, ipsam blanditiis ducimus suscipit ad aliquid pariatur vitae!
+                <p class="mt-6 leading-relaxed text-justify">
+                    Pusat Kajian Kecerdasan Artifisial (AI) Universitas Udayana merupakan unit kajian strategis di lingkungan Universitas Udayana:
                 </p>
-                <p class="mt-4 leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore velit libero voluptatum accusantium. Voluptate quasi vel nobis fugit! Atque numquam ea autem fugit quia, delectus nostrum eaque alias libero quidem.
+                <p class="mt-4 leading-relaxed text-justify">
+                        Berfokus pada pengembangan, penelitian, inovasi, dan penerapan teknologi kecerdasan artificial (AI) untuk menjawab tantangan lokal, nasional, dan global, khususnya dalam konteks keunikan budaya, masyarakat, dan potensi wilayah Bali dan Indonesia Timur.
+                        <br>Sebagai bagian dari komitmen Unud dalam mendukung transformasi digital nasional, pusat kajian ini berperan sebagai inkubator keilmuan dan inovasi AI lintas disiplin yang bersinergi dengan pemerintah, industri, dan masyarakat untuk menciptakan solusi cerdas berbasis kearifan lokal.
                 </p>
             </div>
         </div>
