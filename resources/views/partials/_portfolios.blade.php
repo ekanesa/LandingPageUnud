@@ -26,8 +26,8 @@
                 
                 <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/80 to-transparent"></div>
                 
-                <div class="absolute bottom-0 left-0 p-4">
-                    <h3 class="font-semibold uppercase tracking-wider text-sm">{{ $portfolio->type ?? 'Category' }}</h3>
+                <div class="absolute bottom-0 left-0 p-2 bg-blue-600/30 w-full">
+                    <h3 class="text-white font-semibold uppercase tracking-wider text-sm px-6 py-2">{{ $portfolio->title}}</h3>
                 </div>
             </div>
             @empty

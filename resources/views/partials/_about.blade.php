@@ -10,12 +10,14 @@
         <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
             <div class="flex justify-center" data-aos="fade-up">
                 {{-- Ganti 'path/to/your/image.jpg' dengan path gambar Anda --}}
+                {{-- <iframe width="560" height="315" src="https://www.youtube.com/embed/SLO1oPmkVvw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg shadow-lg h-64 w-full object-cover lg:h-96"></iframe> --}}
                 <img src="/asset/uceai.jpg" alt="About Us Image" class="rounded-lg shadow-lg">
+
             </div>
             <div class="fade-up text-center lg:text-left" data-aos="fade-up">
                 <div class="relative">
 
-                    <h2 class="text-2xl font-bold pb-3 text-white w-96">ABOUT US</h2>
+                    <h2 class="text-2xl font-bold pb-3 text-white w-72">ABOUT US</h2>
 
                     <div class="absolute bottom-1 left-0 w-full h-0.5 bg-white"></div>
                     
