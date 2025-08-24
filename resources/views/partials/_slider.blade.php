@@ -33,7 +33,7 @@
         <!-- Konten Overlay (Judul & Tombol) -->
         <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black bg-opacity-40 p-4 text-center text-white">
             
-            <a href="/project-hand-gesture-main/landing.html" 
+            <a href="/project-hand-gesture-main/scan.html" 
                class="text-base md:text-lg font-bold bg-blue-900 text-white px-8 py-3 mb-8 transition hover:bg-blue-800">
                Try It Now!
             </a>

@@ -17,6 +17,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/video', function () {
 //     return view('video', ['title' => 'video']);
 // });
+Route::get('/video', function () {
+    return view('video', ['title' => 'video']);
+});
 Route::get('/video-player', function () {
     return view('video-player', ['title' => 'video-player']);
 });
