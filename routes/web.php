@@ -14,34 +14,17 @@ use App\Http\Controllers\SliderController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/layanan', function () {
-    return view('layanan', ['title' => 'Layanan']);
-});
-
-Route::get('/solusi', function () {
-    return view('solusi', ['title' => 'Solusi']);
-});
-
-Route::get('/harga', function () {
-    return view('harga', ['title' => 'Harga']);
+// Route::get('/video', function () {
+//     return view('video', ['title' => 'video']);
+// });
+Route::get('/video-player', function () {
+    return view('video-player', ['title' => 'video-player']);
 });
 
 Route::get('/berita', function () {
     return view('berita', ['title' => 'Berita']);
 });
 
-Route::get('/company', function () {
-    return view('company', ['title' => 'Company']);
-});
-
-
-Route::get('/hubungi', function () {
-    return view('hubungi', ['title' => 'Hubungi kami']);
-});
-
-Route::get('/harga/paket', function () {
-    return view('paket');
-});
 
 
 

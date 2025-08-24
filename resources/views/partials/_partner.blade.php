@@ -1,7 +1,7 @@
 <!-- Container Utama untuk Grid Logo -->
 <div id="partner" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
 
-    <div class="text-center mb-16">
+    <div class="text-center mb-16 px-4">
         <div class="relative px-4">
             <h2 class="text-3xl font-bold pb-3 text-blue-800">PARTNER</h2>
             <div class="absolute bottom-1 left-0 w-full h-px bg-blue-800"></div>
@@ -9,18 +9,14 @@
         </div>              
     </div>
 
-    {{-- <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16 items-center justify-center">
-
-        @forelse($partnerships as $partnership)
-            <div class="text-center transition-transform transform hover:scale-110">
-                <img src="{{ asset('storage/' . $partnership->thumbnail) }}" 
-                     alt="{{ $partnership->name }}" 
-                     class="max-h-20 mx-auto object-contain"> </div>
-        @empty
-        @endforelse
-
-    </div> --}}
-    <div class="flex flex-wrap justify-center items-center gap-x-48 gap-y-16">
+    <!-- 
+      PERBAIKAN:
+      - 'flex-col': Membuat layout vertikal di mobile (default).
+      - 'sm:flex-row': Mengembalikan layout ke horizontal di tablet ke atas.
+      - 'gap-y-12': Mengatur jarak vertikal di mobile.
+      - 'sm:gap-x-16': Mengatur jarak horizontal di tablet ke atas.
+    -->
+    <div class="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-y-12 sm:gap-x-16 gap-x-24">
 
         @forelse($partnerships as $partnership)
             <div class="text-center transition-transform transform hover:scale-110">
@@ -29,6 +25,8 @@
                      class="max-h-20 mx-auto object-contain">
             </div>
         @empty
+            <!-- Pesan ini akan muncul jika tidak ada partner -->
+            <p class="text-gray-500">No partners to display at the moment.</p>
         @endforelse
 
     </div>

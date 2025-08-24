@@ -1,4 +1,4 @@
-<section id="portfolio" class="bg-blue-900 text-white">
+<section id="portfolio" class="bg-blue-900 text-white px-4">
     <div  class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -13,7 +13,7 @@
                     <div class="absolute bottom-0 left-0 w-1/3 h-1.5 bg-white"></div>
 
                 </div>     
-                <p class="text-gray-300 leading-relaxed mt-4">
+                <p class="text-gray-300 leading-relaxed mt-4 text-justify">
                     We have been actively engaged in technological innovation in order to become a focal point for the development and dissemination of artificial intelligence and digital technology in Indonesia.
                 </p>
             </div>

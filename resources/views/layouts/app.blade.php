@@ -27,7 +27,7 @@
 
 <body class="h-full w-full overflow-x-hidden">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-  <div class="min-h-full">
+  <div class="my-24">
     
     <x-navbar></x-navbar>
 

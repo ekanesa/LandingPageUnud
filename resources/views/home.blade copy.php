@@ -7,8 +7,9 @@
         @include('partials._slider', ['sliders' => $sliders])
 
         {{-- Overlay for content --}}
-        {{-- <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black bg-opacity-40 p-4 text-center text-white">
+        <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black bg-opacity-40 p-4 text-center text-white">
 
+            {{-- Content Container --}}
             <a href="/project-hand-gesture-main/landing.html" class="text-xl font-bold md:text-xl bg-blue-900 text-white px-10 py-2 mb-8">Try It Now!</a>
 
             <div class="relative z-20 max-w-4xl">
@@ -17,7 +18,7 @@
                     EXCELENT AI INNOVATION
                 </h1>
             </div>
-        </div> --}}
+        </div>
     </div>
     
     @include('partials._about')

@@ -52,20 +52,46 @@
             </div>
             </div>
         
-        <div>
-            <h4 class="text-white font-semibold mb-2">Address</h4>
-            <p class="text-white text-sm mb-2">Jl. Raya Kampus UNUD, Bukit Jimbaran, Kuta Selatan, Badung, Bali 80361</p>
-            <div class="flex flex-col gap-2 text-white">
-                <div class="flex items-center gap-2">
-                    <span class="iconify" data-icon="line-md:email-twotone" style="color: white;"></span>
-                    <a href="mailto:info@unud.ac.id" class="hover:text-blue-500">info@unud.ac.id</a>
-                </div>
-                <div class="flex items-center gap-2">
-                    <span class="iconify" data-icon="mdi:contact" style="color: white;"></span> 
-                    <a href="https://wa.me/+62361701954" class="hover:text-green-500">+62 (361) 701954, 704845</a>
-                </div>
+<div>
+    <!-- Judul kolom dengan garis bawah untuk hierarki visual -->
+    <h4 class="text-lg font-semibold text-white mb-4 pb-2 border-b border-gray-500/50">
+        Contact Us
+    </h4>
+    
+    <!-- Wrapper untuk konten agar mudah diatur jaraknya -->
+    <div class="space-y-4">
+
+        <!-- Bagian Alamat -->
+        <div class="flex items-start gap-3">
+            <!-- Ikon Alamat -->
+            <div class="flex-shrink-0 pt-1">
+                <span class="iconify" data-icon="mdi:map-marker-outline" style="color: white; font-size: 1.2rem;"></span>
             </div>
+            <!-- Teks Alamat -->
+            <p class="text-gray-300 text-sm leading-relaxed">
+                Jl. Raya Kampus UNUD, Bukit Jimbaran, Kuta Selatan, Badung, Bali 80361
+            </p>
         </div>
+
+        <!-- Bagian Email -->
+        <div class="flex items-center gap-3">
+            <span class="iconify" data-icon="line-md:email-twotone" style="color: white; font-size: 1.2rem;"></span>
+            <a href="mailto:uceai@unud.ac.id" class="text-gray-300 hover:text-blue-400 transition-colors duration-300">
+                uceai@unud.ac.id
+            </a>
+        </div>
+
+        <!-- Bagian WhatsApp -->
+        <div class="flex items-center gap-3">
+            <!-- Mengganti ikon menjadi ikon WhatsApp yang lebih spesifik -->
+            <span class="iconify" data-icon="mdi:whatsapp" style="color: white; font-size: 1.2rem;"></span> 
+            <a href="https://wa.me/+6281916250421" class="text-gray-300 hover:text-green-400 transition-colors duration-300">
+                +6281916250421
+            </a>
+        </div>
+        
+    </div>
+</div>
 
         {{-- <div>
             <h4 class="text-white font-semibold mb-2">Links</h4>
