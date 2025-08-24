@@ -13,6 +13,11 @@ class SliderController extends Controller
         $sliders = Slider::where('is_active', true)->get();
         return view('slider', compact('sliders'));
     }
+    public function show()
+    {
+        $sliders = Slider::where('is_active', true)->get();
+        return view('partials._slider_article', compact('sliders'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -33,10 +38,6 @@ class SliderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
