@@ -25,7 +25,7 @@
  
 </head>
 
-<body class="h-full w-full overflow-x-hidden">
+<body class="">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
   <div class="my-24">
     
@@ -36,13 +36,10 @@
 
   </div>
 
-  <x-footer></x-footer>
-
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-  <x-whatsapp-button />
   
 </body>
 </html>
