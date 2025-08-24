@@ -27,6 +27,9 @@ Route::get('/video-player', function () {
 Route::get('/berita', function () {
     return view('berita', ['title' => 'Berita']);
 });
+Route::get('/hubungi', function () {
+    return view('hubungi', ['title' => 'Hubungi']);
+});
 
 
 

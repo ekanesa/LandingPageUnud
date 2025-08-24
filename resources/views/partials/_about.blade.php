@@ -12,7 +12,7 @@
         <div class="grid items-center gap-4 lg:grid-cols-2 lg:gap-16 p-6">
             <div class="flex justify-center" data-aos="fade-up">
                 <!-- PERBAIKAN: Ukuran gambar dibatasi di mobile agar tidak terlalu besar -->
-                <img src="/asset/uceai.jpg" alt="About Us Image" class="rounded-lg shadow-lg w-full max-w-sm lg:max-w-full h-auto">
+                <img src="/asset/UCEAI LOGO.png" alt="About Us Image" class="bg-yellow-500 rounded-lg shadow-lg w-full max-w-sm lg:max-w-full h-auto lg:p-6">
             </div>
             <div class="fade-up text-center text-sm lg:text-left " data-aos="fade-up">
                 <!-- PERBAIKAN: Judul dibuat responsif, tanpa lebar tetap -->

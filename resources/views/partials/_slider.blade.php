@@ -35,7 +35,7 @@
             
             <a href="/project-hand-gesture-main/scan.html" 
                class="text-base md:text-lg font-bold bg-blue-900 text-white px-8 py-3 mb-8 transition hover:bg-blue-800">
-               Start Launching
+                LAUNCH
             </a>
 
             <div class="relative z-20 max-w-5xl">
