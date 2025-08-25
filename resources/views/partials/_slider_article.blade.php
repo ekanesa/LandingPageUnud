@@ -3,8 +3,6 @@
     {{-- Fallback jika tidak ada gambar slider --}}
     <div class="flex h-[48vh] items-center justify-center bg-gray-100 md:h-[24vh] lg:h-[48vh]">
         <div class="text-center text-gray-500">
-            <h1 class="text-2xl font-bold">Welcome</h1>
-            <p>Slider images are currently unavailable.</p>
         </div>
     </div>
 @else

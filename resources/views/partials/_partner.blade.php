@@ -25,8 +25,6 @@
                      class="max-h-20 mx-auto object-contain">
             </div>
         @empty
-            <!-- Pesan ini akan muncul jika tidak ada partner -->
-            <p class="text-gray-500">No partners to display at the moment.</p>
         @endforelse
 
     </div>

@@ -3,8 +3,6 @@
     {{-- Fallback jika tidak ada gambar slider --}}
     <div class="flex h-[60vh] items-center justify-center bg-gray-100 md:h-[72vh] lg:h-[92vh]">
         <div class="text-center text-gray-500">
-            <h1 class="text-2xl font-bold">Welcome</h1>
-            <p>Slider images are currently unavailable.</p>
         </div>
     </div>
 @else
@@ -33,7 +31,7 @@
         <!-- Konten Overlay (Judul & Tombol) -->
         <div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-black bg-opacity-40 p-4 text-center text-white">
             
-            <a href="/project-hand-gesture-main/scan.html" 
+            <a href="/hand-gesture-verification/scan.html" 
                class="text-base md:text-lg font-bold bg-blue-900 text-white px-8 py-3 mb-8 transition hover:bg-blue-800">
                 LAUNCH
             </a>
