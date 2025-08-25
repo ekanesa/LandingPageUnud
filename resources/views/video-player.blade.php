@@ -43,7 +43,7 @@
                 playsinline>
                 
                 <!-- Sumber video dari penyimpanan lokal -->
-                <source src="{{ asset('videos/Lab AI UNUD_Final.mp4') }}" type="video/mp4">
+                <source src="{{ asset('videos/LAB_AI.mp4') }}" type="video/mp4">
                 
                 <!-- Pesan fallback -->
                 Browser Anda tidak mendukung tag video.
